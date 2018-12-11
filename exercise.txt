@@ -1,0 +1,119 @@
+1. Film:
+   id, title, year
+
+   Viewer:
+   id, name, age
+
+   Views:
+   film id, viewer id.
+
+2. Worker:
+  id, name, wage
+
+  Shift:
+  id, day, time
+
+  Schedule:
+  worker id, shift id.
+
+3.Chapter:
+  id, book id, title
+
+  Book:
+  id, title, year
+
+  Reader:
+  id, name, age
+
+  Author:
+  id, name
+
+  Catalog-Author:
+  book id, author id
+
+  Catalog - Reader:
+  book id, reader id
+--------------------------------------
+Part 2
+
+1.
+comic  |1 <---> many | issue
+artist |1 <---> many | issue
+artist |1 <---> many | comics
+writer |1 <---> many | issue
+writer |1 <---> many | comics
+
+2.
+
+song     |1 <---> many | setlist
+song     |1 <---> many | instrument
+setlist  |1 <---> 1    | tour date
+tour date|1 <---> many | song
+
+3.
+
+artist  |1 <---> many | artwork
+curator |1 <---> many | exhibit
+exhibit |1 <---> many | artwork
+gallery |1 <---> many | exhibit
+
+4.
+music piece |1 <---> 1   | sheet music
+music piece |1 <---> many| instrument
+-------------------------------------
+Part 3
+
+1.
+user      |1 <---> many | order
+food      |1 <---> many | restaurant
+restaurant|1 <---> many | order
+
+
+Restaurant
+ID, Name
+
+User
+ID, Name
+
+Food
+ID, Name, Restaurant ID
+
+Order
+ID, Food ID, User ID
+
+2.
+
+Airline|1 <---> many | Flight
+Flight |1 <---> many | Crew
+Flight |1 <---> many | Passenger
+
+
+Airline
+id, name
+
+Flight
+id, airline id
+
+Passenger
+id, flight id
+
+Crew
+id, flight id
+
+
+3.
+Artist   |1 <---> many | Track
+Listener |1 <---> many | Subscription
+
+
+artist
+id
+
+track
+id, artist id
+
+listeners
+id
+
+subscribe
+id, artist id, lister id.
